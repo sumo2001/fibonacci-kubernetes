@@ -8,8 +8,10 @@
 - You know, fibonacci number?, we will be calucating the fibonnaci number on the index given
 - ![image](https://user-images.githubusercontent.com/51809378/162627399-2abbc12a-4241-4a22-b650-4672e3ddabba.png)
 - We will be using an [ingress image](https://github.com/kubernetes/ingress-nginx/) to capture input from the end user and later on, will serve them to our express server and react clients
-- So the postgres will store all the values the user or server calculated before
-- 
+- So the postgres will store all the indexes the user or server has seen before
+- The redis will take the index and stores it in her database
+- The worker node will contact redis and calcuates the value for the index stored in redis and updates the value in redis db
+- The calcualated and the seen indexes are shown in our frontend
 ## Install
 - git clone https://github.com/sumo2001/fibonacci-kubernetes.git
 - cd fibonacci-kubernetes/
@@ -28,6 +30,10 @@
 - ![image](https://user-images.githubusercontent.com/51809378/162625216-75bb28d5-ce14-406e-8562-6ed91a19a07e.png)
 - Step 4
 - ![image](https://user-images.githubusercontent.com/51809378/162625422-a2d5ed16-856c-40ec-adc9-2a0f172947ef.png)
+- Give input, click submit, wait few seconds and click on refresh
+## Debugging
+- There are chances that one of our deployments may break or throw an error
+- 
 
 
 
