@@ -8,10 +8,15 @@
 - You know, fibonacci number?, we will be calucating the fibonnaci number on the index given
 - ![image](https://user-images.githubusercontent.com/51809378/162627399-2abbc12a-4241-4a22-b650-4672e3ddabba.png)
 - We will be using an [ingress image](https://github.com/kubernetes/ingress-nginx/) to capture input from the end user and later on, will serve them to our express server and react clients
+- ![image](https://user-images.githubusercontent.com/51809378/162628846-25496120-4947-4340-9d7a-7123ad24701d.png)
 - So the postgres will store all the indexes the user or server has seen before
 - The redis will take the index and stores it in her database
 - The worker node will contact redis and calcuates the value for the index stored in redis and updates the value in redis db
 - The calcualated and the seen indexes are shown in our frontend
+- The PVC [persistent volume claim] is something that provides persistant data to the postgres deployments (one word: disaster recovery)
+- ![image](https://user-images.githubusercontent.com/51809378/162629010-45386124-4426-43c4-b933-fd68d09754a8.png)
+
+
 ## Install
 - git clone https://github.com/sumo2001/fibonacci-kubernetes.git
 - cd fibonacci-kubernetes/
